@@ -1,0 +1,83 @@
+.sidebar-container {
+  position: absolute;
+  left: 2.3vw;
+  top: 3vh;
+  height: 100vh;
+  width: 8vh;
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+
+.sidebar-popup-btns-container {
+  position: relative;
+  height: 100vh;
+  width: 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  bottom: 15vh;
+  justify-content: flex-end;
+}
+
+.add-popup-btn {
+  color: black;
+  background-color: white;
+  border-radius: 100%;
+  border: 0px;
+  height: 8vh;
+  width: 8vh;
+  cursor: pointer;
+  font-size: medium;
+  animation: buttonAppear 0.5s forwards;
+  transform-origin: center;
+}
+
+@keyframes buttonAppear {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes popupTextAppear {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: rgb(194, 194, 194);
+  transform: scale(0.98);
+}
+
+.floating-action-button {
+  height: 8vh;
+  width: 8vh;
+  position: absolute;
+  color: black;
+  font-size: xx-large;
+  background-color: orange;
+  border: 0px;
+  border-radius: 100%;
+  bottom: 5vh;
+  left: 2%;
+  font-family: 'Courier New', Courier, monospace;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.floating-action-button.open {
+  transform: rotate(180deg);
+}
